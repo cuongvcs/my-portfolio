@@ -76,18 +76,20 @@ const portfolioData = {
     ],
 
     // 3. TIN TỨC / CHIA SẺ (NEWS/BLOG)
+    // HƯỚNG DẪN: Ở phần 'link', bạn hãy copy toàn bộ đường dẫn trên Internet dán vào (ví dụ https://www.linkedin.com/post/...)
+    // Web đã được thiết lập tự động mở tab mới (target="_blank") khi khách hàng ấn vào.
     news: [
         {
-            date: "Tháng 3, 2026",
+            date: "Cập nhật mới",
             title: "Tại sao nên chuyển từ DeviceNet sang EtherNet/IP?",
-            summary: "DeviceNet đang dần bị loại bỏ. Bài viết này tôi chia sẻ kinh nghiệm thực tế về lộ trình nâng cấp phần cứng và phần mềm để chuyển đổi sang EtherNet/IP mà không làm gián đoạn sản xuất kéo dài...",
-            link: "#" // Điền link Facebook/LinkedIn của bạn vào đây
+            summary: "DeviceNet đang dần bị loại bỏ. Bài viết này tôi chia sẻ kinh nghiệm thực tế về lộ trình nâng cấp thiết bị và phần mềm để chuyển đổi sang EtherNet/IP (CIP) mà không làm gián đoạn dây chuyền sản xuất...",
+            link: "https://www.linkedin.com/in/ngo-van-cuong-3a8275b7" // <--- Điền link thực tế bắt đầu bằng https:// vào đây
         },
         {
             date: "Tháng 2, 2026",
-            title: "Lưu ý sống còn khi dùng Add-On Instructions (AOI) trong Studio 5000",
-            summary: "AOI rất mạnh nhưng nếu không cẩn thận khi online edit, bạn sẽ gặp rắc rối lớn. Dưới đây là 3 nguyên tắc tôi luôn áp dụng khi đóng gói logic...",
-            link: "#"
+            title: "Kinh nghiệm thực tiễn: Lỗi chết máy khi tải file .ACD vào ControlLogix",
+            summary: "AOI (Add-On Instructions) rất uy lực, nhưng nếu quản lý các Data Type (UDT) không chuẩn khi Online Edit, bạn sẽ đau đầu. Đọc thêm về cách tôi quy chuẩn hóa code...",
+            link: "https://www.rockwellautomation.com/en-us/company/news/blogs.html" // <--- Điền link bài báo/blog vào đây
         }
     ]
 };
