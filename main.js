@@ -96,18 +96,83 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // 5. Skill Card Expansion Logic
+    // 5. Dynamic Data Rendering from portfolioData (data.js)
+    if (typeof portfolioData !== 'undefined') {
+        
+        // Render Skills
+        const skillsContainer = document.getElementById('skills-container');
+        if(skillsContainer) {
+            let delay = 0;
+            skillsContainer.innerHTML = portfolioData.skills.map(s => {
+                let infoList = s.details.map(d => `<li>${d}</li>`).join('');
+                let delayStr = delay > 0 ? `style="transition-delay: ${delay}ms;"` : '';
+                delay += 100;
+                return `
+                <div class="skill-card fade-up" ${delayStr}>
+                    <div class="skill-icon">${s.icon}</div>
+                    <h3>${s.title}</h3>
+                    <p>${s.description}</p>
+                    <div class="skill-more-info">
+                        <ul>${infoList}</ul>
+                    </div>
+                    <div class="skill-bar-container"><div class="skill-bar" style="width: ${s.percent}%;"></div></div>
+                </div>`;
+            }).join('');
+        }
+
+        // Render Projects
+        const projectsContainer = document.getElementById('projects-container');
+        if(projectsContainer) {
+            let pDelay = 0;
+            projectsContainer.innerHTML = portfolioData.projects.map(p => {
+                let tagsStr = p.tags.map(t => `<span class="tag">${t}</span>`).join('');
+                let delayStr = pDelay > 0 ? `style="transition-delay: ${pDelay}ms;"` : '';
+                pDelay += 200;
+                return `
+                <div class="project-card fade-in" ${delayStr}>
+                    <div class="project-img-wrapper">
+                        <img src="${p.image}" alt="${p.title}" class="project-img">
+                        <div class="project-tags">${tagsStr}</div>
+                    </div>
+                    <div class="project-info">
+                        <h3>${p.title}</h3>
+                        <p>${p.description}</p>
+                        <a href="#" class="btn-text">Read Case Study ➔</a>
+                    </div>
+                </div>`;
+            }).join('');
+        }
+
+        // Render News
+        const newsContainer = document.getElementById('news-container');
+        if(newsContainer && portfolioData.news) {
+            let nDelay = 0;
+            newsContainer.innerHTML = portfolioData.news.map(n => {
+                let delayStr = nDelay > 0 ? `style="transition-delay: ${nDelay}ms;"` : '';
+                nDelay += 150;
+                return `
+                <div class="news-card fade-in" ${delayStr}>
+                    <div class="news-date">${n.date}</div>
+                    <div class="news-content">
+                        <h3>${n.title}</h3>
+                        <p>${n.summary}</p>
+                        <a href="${n.link}" target="_blank" class="btn-text">Read Full Article ➔</a>
+                    </div>
+                </div>`;
+            }).join('');
+        }
+    }
+
+    // 6. Skill Card Expansion Logic
     const skillCards = document.querySelectorAll('.skill-card');
     skillCards.forEach(card => {
         card.addEventListener('click', () => {
-            // Toggle expanded class
             card.classList.toggle('expanded');
-            
-            // Optional: Close others when opening one
-            // skillCards.forEach(c => {
-            //     if(c !== card) c.classList.remove('expanded');
-            // });
         });
     });
+    
+    // Observers have to re-observe newly injected items
+    const newHiddenElements = document.querySelectorAll('.fade-up, .fade-in');
+    newHiddenElements.forEach(el => observer.observe(el));
 
 });
