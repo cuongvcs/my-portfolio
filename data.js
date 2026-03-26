@@ -76,20 +76,27 @@ const portfolioData = {
     ],
 
     // 3. TIN TỨC / CHIA SẺ (NEWS/BLOG)
-    // HƯỚNG DẪN: Ở phần 'link', bạn hãy copy toàn bộ đường dẫn trên Internet dán vào (ví dụ https://www.linkedin.com/post/...)
-    // Web đã được thiết lập tự động mở tab mới (target="_blank") khi khách hàng ấn vào.
+    // HƯỚNG DẪN: Ở phần 'link', bạn hãy copy toàn bộ đường dẫn Internet dán vào. Nếu bạn dùng link, nút sẽ ghi "Đọc bài viết trên Web".
+    // 💥 ĐẶC BIỆT: Nếu bài viết của bạn để thẳng trên Website này mà không có link nào cả, hãy DÙNG cú pháp `fullContent` ở bên dưới!
     news: [
+        {
+            date: "Bài viết chia sẻ",
+            title: "Tự động hóa toàn diện: Các bước triển khai SCADA",
+            summary: "Đây là tóm tắt hiển thị mồi nhử. Ấn nút bên dưới để nó sẽ tự động XỔ XUỐNG toàn bộ nội dung mà không văng ra trang mới (Rất thích hợp cho viết nháp nhật ký công trình).",
+            link: "", // Bỏ trống link
+            fullContent: "Nội dung phần 1: Thiết kế giao diện (HMI) theo chuẩn ISA 101.\\nViệc sử dụng quá nhiều màu sắc trên HMI gây ức chế và làm giảm khả năng nhận diện Alarm. Nên sử dụng màu Grey (Xám) làm nền.\\n\\nNội dung phần 2: Chuyển dữ liệu lên Cloud.\\nSử dụng giao thức MQTT kết nối với Sparkplug B để đảm bảo toàn dữ liệu..." // Dùng dấu \n \n để xuống dòng chữ!
+        },
         {
             date: "Cập nhật mới",
             title: "Tại sao nên chuyển từ DeviceNet sang EtherNet/IP?",
-            summary: "DeviceNet đang dần bị loại bỏ. Bài viết này tôi chia sẻ kinh nghiệm thực tế về lộ trình nâng cấp thiết bị và phần mềm để chuyển đổi sang EtherNet/IP (CIP) mà không làm gián đoạn dây chuyền sản xuất...",
-            link: "https://www.linkedin.com/in/ngo-van-cuong-3a8275b7" // <--- Điền link thực tế bắt đầu bằng https:// vào đây
+            summary: "DeviceNet đang dần bị loại bỏ. Bài viết này chia sẻ lộ trình nâng cấp thiết bị và phần mềm để chuyển đổi sang EtherNet/IP (CIP) mà không làm gián đoạn dây chuyền...",
+            link: "https://www.linkedin.com/in/ngo-van-cuong-3a8275b7" 
         },
         {
             date: "Tháng 2, 2026",
             title: "Kinh nghiệm thực tiễn: Lỗi chết máy khi tải file .ACD vào ControlLogix",
             summary: "AOI (Add-On Instructions) rất uy lực, nhưng nếu quản lý các Data Type (UDT) không chuẩn khi Online Edit, bạn sẽ đau đầu. Đọc thêm về cách tôi quy chuẩn hóa code...",
-            link: "https://www.rockwellautomation.com/en-us/company/news/blogs.html" // <--- Điền link bài báo/blog vào đây
+            link: "https://www.rockwellautomation.com/en-us/company/news/blogs.html" 
         }
     ]
 };

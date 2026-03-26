@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,15 +9,24 @@
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;900&family=Roboto+Mono:wght@400;600&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;900&family=Roboto+Mono:wght@400;600&display=swap"
+        rel="stylesheet">
 </head>
+
 <body>
 
     <!-- Sticky Navigation -->
     <nav class="navbar" id="navbar">
         <div class="nav-container">
             <a href="#home" class="logo">
-                <span class="logo-icon">⚡</span> AUTOMAT<span class="highlight">I/O</span>N.
+                <!-- CÁCH THÊM LOGO: 
+                     1. Copy ảnh logo của bạn vào thư mục assets, đổi tên thành logo.png.
+                     2. XÓA dòng chữ VCS AUTOMATION bên dưới đi.
+                     3. XÓA các dấu mũi tên <!-- và --> ở thẻ <img> bên dưới để kích hoạt nó lên.
+                -->
+                <!-- <img src="assets/logo.png" alt="VCS Logo" class="nav-brand-logo"> -->
+                <span class="logo-icon">⚡</span> VCS <span class="highlight">AUTOMATION</span>
             </a>
             <ul class="nav-links">
                 <li><a href="#home">Home</a></li>
@@ -49,13 +59,17 @@
                 <a href="#contact" class="btn-outline">Let's Talk</a>
             </div>
         </div>
-        
+
         <!-- Tech Marquee Banner (Decorative) -->
         <div class="tech-marquee">
             <div class="marquee-content">
-                <span>ControlLogix</span> • <span>CompactLogix</span> • <span>Studio 5000</span> • <span>FactoryTalk View SCADA</span> • <span>EtherNet/IP</span> • <span>PowerFlex VFD</span> • <span>Kinetix Servos</span> • <span>MQTT</span> • <span>MQTT</span> • 
+                <span>ControlLogix</span> • <span>CompactLogix</span> • <span>Studio 5000</span> • <span>FactoryTalk
+                    View SCADA</span> • <span>EtherNet/IP</span> • <span>PowerFlex VFD</span> • <span>Kinetix
+                    Servos</span> • <span>MQTT</span> • <span>MQTT</span> •
                 <!-- Duplicated for infinite scroll -->
-                <span>ControlLogix</span> • <span>CompactLogix</span> • <span>Studio 5000</span> • <span>FactoryTalk View SCADA</span> • <span>EtherNet/IP</span> • <span>PowerFlex VFD</span> • <span>Kinetix Servos</span> • 
+                <span>ControlLogix</span> • <span>CompactLogix</span> • <span>Studio 5000</span> • <span>FactoryTalk
+                    View SCADA</span> • <span>EtherNet/IP</span> • <span>PowerFlex VFD</span> • <span>Kinetix
+                    Servos</span> •
             </div>
         </div>
     </header>
@@ -72,14 +86,18 @@
                 </div>
             </div>
             <div class="about-text fade-in">
-                <h2 class="section-title">Bridging the gap between <br><span class="highlight">Machines</span> & <span class="highlight">Data</span></h2>
+                <h2 class="section-title">Bridging the gap between <br><span class="highlight">Machines</span> & <span
+                        class="highlight">Data</span></h2>
                 <p>
-                    I am an Industrial Automation Engineer dedicated to optimizing production lines, enhancing machine safety, and driving overall equipment effectiveness (OEE). 
+                    Được hình thành từ niềm đam mê tự động hóa của bản thân, VCS Automation Service luôn đồng hành cùng
+                    các nhà máy trong việc đảm bảo cho thiết bị và dây chuyền sản xuất không bị gián đoạn.
                 </p>
                 <p>
-                    My philosophy is rooted in robust, maintainable ladder logic and scalable SCADA architectures. I possess a deep passion for <strong>Rockwell Automation</strong> ecosystems, bringing archaic control cabinets into the modern IIoT cloud era.
+                    Với nhiều năm kinh nghiệm trong lĩnh vực tự động hóa nói chung và Rockwell Automation nói riêng, VCS
+                    Automation Service sẽ cung cấp cho bạn các giải pháp kỹ thuật, dịch vụ đáp ứng các yêu cầu khó tính
+                    nhất của khách hàng.
                 </p>
-                
+
                 <div class="stats-row">
                     <div class="stat-item">
                         <h3 class="stat-num counter" data-target="20">0</h3>
@@ -103,7 +121,7 @@
         <div class="container">
             <h2 class="section-title text-center">Core <span class="highlight">Competencies</span></h2>
             <p class="section-subtitle text-center">Mastering the Rockwell stack and beyond.</p>
-            
+
             <div class="skills-grid" id="skills-container">
                 <!-- Skills will be rendered here by main.js from data.js -->
             </div>
@@ -115,7 +133,7 @@
         <div class="container">
             <h2 class="section-title text-center">Featured <span class="highlight">Projects</span></h2>
             <p class="section-subtitle text-center">Real-world automation challenges solved.</p>
-            
+
             <div class="project-grid" id="projects-container">
                 <!-- Projects will be rendered here by main.js from data.js -->
             </div>
@@ -123,7 +141,8 @@
     </section>
 
     <!-- News Section -->
-    <section id="news" class="section section-dark" style="background-color: var(--bg-dark); border-top: 1px solid var(--border);">
+    <section id="news" class="section section-dark"
+        style="background-color: var(--bg-dark); border-top: 1px solid var(--border);">
         <div class="container">
             <h2 class="section-title text-center">Industry <span class="highlight">Insights</span></h2>
             <p class="section-subtitle text-center">My latest articles, updates, and shares.</p>
@@ -131,62 +150,67 @@
                 <!-- News will be rendered here by main.js -->
             </div>
 
-    <!-- Contact & Footer -->
-    <section id="contact" class="section section-dark" style="border-top: 1px solid var(--border);">
-        <div class="container">
-            <div class="contact-grid">
-                <div class="contact-text fade-in">
-                    <h2 class="section-title">Ready to <span class="highlight">Automate?</span></h2>
-                    <p style="color: var(--text-secondary); margin-bottom: 30px;">
-                        Whether you need troubleshooting for a faulted drive, a completely new PLC architectural design, or just want to talk shop about FactoryTalk... drop me a message.
-                    </p>
-                    <div class="contact-methods">
-                        <div class="method-item">
-                            <span class="method-icon">📧</span>
-                            <div>
-                                <h4>Email Me</h4>
-                                <a href="mailto:cuongvcs@outlook.com">cuongvcs@outlook.com</a>
+            <!-- Contact & Footer -->
+            <section id="contact" class="section section-dark" style="border-top: 1px solid var(--border);">
+                <div class="container">
+                    <div class="contact-grid">
+                        <div class="contact-text fade-in">
+                            <h2 class="section-title">Ready to <span class="highlight">Automate?</span></h2>
+                            <p style="color: var(--text-secondary); margin-bottom: 30px;">
+                                Whether you need troubleshooting for a faulted drive, a completely new PLC architectural
+                                design, or just want to talk shop about FactoryTalk... drop me a message.
+                            </p>
+                            <div class="contact-methods">
+                                <div class="method-item">
+                                    <span class="method-icon">📧</span>
+                                    <div>
+                                        <h4>Email Me</h4>
+                                        <a href="mailto:cuongvcs@outlook.com">cuongvcs@outlook.com</a>
+                                    </div>
+                                </div>
+                                <div class="method-item" style="margin-top: 20px;">
+                                    <span class="method-icon">💼</span>
+                                    <div>
+                                        <h4>LinkedIn Profile</h4>
+                                        <a href="https://www.linkedin.com/in/ngo-van-cuong-3a8275b7"
+                                            target="_blank">linkedin.com/in/ngo-van-cuong-3a8275b7</a>
+                                    </div>
+                                </div>
                             </div>
                         </div>
-                        <div class="method-item" style="margin-top: 20px;">
-                            <span class="method-icon">💼</span>
-                            <div>
-                                <h4>LinkedIn Profile</h4>
-                                <a href="https://www.linkedin.com/in/ngo-van-cuong-3a8275b7" target="_blank">linkedin.com/in/ngo-van-cuong-3a8275b7</a>
+
+                        <form class="contact-form fade-in" action="https://formsubmit.co/cuongvcs@outlook.com"
+                            method="POST">
+                            <!-- FormSubmit Configuration -->
+                            <input type="hidden" name="_subject" value="[Website Portfolio] Yêu cầu hợp tác mới!">
+                            <input type="hidden" name="_captcha" value="false">
+
+                            <div class="form-group">
+                                <label>Your Name</label>
+                                <input type="text" name="Tên_Khách_Hàng" placeholder="John Doe" required>
                             </div>
-                        </div>
+                            <div class="form-group">
+                                <label>Email Address</label>
+                                <input type="email" name="Email_Khách" placeholder="john@company.com" required>
+                            </div>
+                            <div class="form-group">
+                                <label>Project Details / Inquiry</label>
+                                <textarea name="Nội_Dung_yêu_cầu" rows="4" placeholder="How can I help you automate..."
+                                    required></textarea>
+                            </div>
+                            <button type="submit" class="btn-primary" style="width:100%;">Send Message</button>
+                        </form>
                     </div>
                 </div>
-                
-                <form class="contact-form fade-in" action="https://formsubmit.co/cuongvcs@outlook.com" method="POST">
-                    <!-- FormSubmit Configuration -->
-                    <input type="hidden" name="_subject" value="[Website Portfolio] Yêu cầu hợp tác mới!">
-                    <input type="hidden" name="_captcha" value="false">
-                    
-                    <div class="form-group">
-                        <label>Your Name</label>
-                        <input type="text" name="Tên_Khách_Hàng" placeholder="John Doe" required>
-                    </div>
-                    <div class="form-group">
-                        <label>Email Address</label>
-                        <input type="email" name="Email_Khách" placeholder="john@company.com" required>
-                    </div>
-                    <div class="form-group">
-                        <label>Project Details / Inquiry</label>
-                        <textarea name="Nội_Dung_yêu_cầu" rows="4" placeholder="How can I help you automate..." required></textarea>
-                    </div>
-                    <button type="submit" class="btn-primary" style="width:100%;">Send Message</button>
-                </form>
-            </div>
-        </div>
-    </section>
+            </section>
 
-    <footer class="footer">
-        <p>© 2026 System Integrator Portfolio. Crafted with Precision & Ladder Logic.</p>
-    </footer>
+            <footer class="footer">
+                <p>© 2026 System Integrator Portfolio. Crafted with Precision & Ladder Logic.</p>
+            </footer>
 
-    <!-- Scripts -->
-    <script src="data.js"></script>
-    <script src="main.js"></script>
+            <!-- Scripts -->
+            <script src="data.js"></script>
+            <script src="main.js"></script>
 </body>
+
 </html>

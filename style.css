@@ -173,6 +173,12 @@ a {
     color: var(--accent-red);
 }
 
+.nav-brand-logo {
+    height: 40px; /* Resize this value to make your logo bigger/smaller */
+    width: auto;
+    display: block;
+}
+
 .nav-links {
     list-style: none;
     display: flex;
@@ -591,6 +597,42 @@ a {
     line-height: 1.6;
     margin-bottom: 15px;
     font-size: 0.95rem;
+}
+
+.news-expanded-content {
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease-in-out, opacity 0.4s ease, margin-top 0.4s ease;
+    color: var(--text-secondary);
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+.news-expanded-content.show {
+    max-height: 2000px;
+    opacity: 1;
+    margin-top: 20px;
+    padding-top: 15px;
+    border-top: 1px dashed var(--border);
+}
+
+.btn-read-more {
+    background: transparent;
+    color: var(--accent-cyan);
+    border: none;
+    font-family: var(--font-mono);
+    font-weight: 600;
+    font-size: 0.9rem;
+    cursor: pointer;
+    padding: 0;
+    margin-top: 5px;
+    transition: 0.3s;
+}
+
+.btn-read-more:hover {
+    color: #fff;
+    margin-left: 5px;
 }
 
 @media (max-width: 768px) {

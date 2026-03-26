@@ -147,21 +147,51 @@ document.addEventListener('DOMContentLoaded', () => {
         const newsContainer = document.getElementById('news-container');
         if(newsContainer && portfolioData.news) {
             let nDelay = 0;
-            newsContainer.innerHTML = portfolioData.news.map(n => {
+            newsContainer.innerHTML = portfolioData.news.map((n, index) => {
                 let delayStr = nDelay > 0 ? `style="transition-delay: ${nDelay}ms;"` : '';
                 nDelay += 150;
+                
+                let actionHTML = '';
+                let extraContent = '';
+                
+                // Render link to external site
+                if (n.link && n.link !== "#" && n.link !== "") {
+                    actionHTML = `<a href="${n.link}" target="_blank" class="btn-text">Đọc bài viết trên Web ➔</a>`;
+                } 
+                // Render expandable text if no link is provided
+                else if (n.fullContent && n.fullContent !== "") {
+                    actionHTML = `<button class="btn-read-more" onclick="window.toggleNews(${index})" id="btn-news-${index}">Đọc thêm ▼</button>`;
+                    // Parse line breaks \n into HTML <p> tags
+                    let formattedContent = n.fullContent.split('\\n').map(p => p.trim() ? `<p style="margin-bottom:10px;">${p}</p>` : '').join('');
+                    extraContent = `<div class="news-expanded-content" id="content-news-${index}">${formattedContent}</div>`;
+                }
+
                 return `
                 <div class="news-card fade-in" ${delayStr}>
                     <div class="news-date">${n.date}</div>
-                    <div class="news-content">
+                    <div class="news-content" style="flex: 1;">
                         <h3>${n.title}</h3>
                         <p>${n.summary}</p>
-                        <a href="${n.link}" target="_blank" class="btn-text">Read Full Article ➔</a>
+                        ${actionHTML}
+                        ${extraContent}
                     </div>
                 </div>`;
             }).join('');
         }
     }
+
+    // Window global function for expanding News
+    window.toggleNews = function(index) {
+        const contentBox = document.getElementById('content-news-' + index);
+        const btn = document.getElementById('btn-news-' + index);
+        if(contentBox.classList.contains('show')) {
+            contentBox.classList.remove('show');
+            btn.innerHTML = 'Đọc thêm ▼';
+        } else {
+            contentBox.classList.add('show');
+            btn.innerHTML = 'Thu gọn ▲';
+        }
+    };
 
     // 6. Skill Card Expansion Logic
     const skillCards = document.querySelectorAll('.skill-card');
