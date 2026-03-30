@@ -82,9 +82,9 @@ const portfolioData = {
         {
             date: "Bài viết chia sẻ",
             title: "Tự động hóa toàn diện: Các bước triển khai SCADA",
-            summary: "Đây là tóm tắt hiển thị mồi nhử. Ấn nút bên dưới để nó sẽ tự động XỔ XUỐNG toàn bộ nội dung mà không văng ra trang mới (Rất thích hợp cho viết nháp nhật ký công trình).",
+            summary: "Đây là tóm tắt. Ấn nút bên dưới để nó sẽ tự động XỔ XUỐNG toàn bộ nội dung mà không văng ra trang mới. Hướng dẫn này có kèm cả ảnh minh họa bên trong!",
             link: "", // Bỏ trống link
-            fullContent: "Nội dung phần 1: Thiết kế giao diện (HMI) theo chuẩn ISA 101.\\nViệc sử dụng quá nhiều màu sắc trên HMI gây ức chế và làm giảm khả năng nhận diện Alarm. Nên sử dụng màu Grey (Xám) làm nền.\\n\\nNội dung phần 2: Chuyển dữ liệu lên Cloud.\\nSử dụng giao thức MQTT kết nối với Sparkplug B để đảm bảo toàn dữ liệu..." // Dùng dấu \n \n để xuống dòng chữ!
+            fullContent: "Nội dung phần 1: Thiết kế giao diện (HMI) theo chuẩn ISA 101.\\nViệc sử dụng quá nhiều màu sắc trên HMI gây ức chế và làm giảm khả năng nhận diện.\\n\\n<img src='assets/ab-panelview.png' style='width:100%; border-radius:8px; margin: 15px 0;'>\\n\\nNội dung phần 2: Chuyển dữ liệu lên Cloud.\\nNhư bức ảnh minh họa phía trên, bạn có thể chèn bất kỳ thẻ HTML nào vào trong bài viết." // Bạn có thể copy thẻ <img ...> để chèn ảnh!
         },
         {
             date: "Cập nhật mới",
