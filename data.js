@@ -90,13 +90,13 @@ const portfolioData = {
             date: "Cập nhật mới",
             title: "Tại sao nên chuyển từ DeviceNet sang EtherNet/IP?",
             summary: "DeviceNet đang dần bị loại bỏ. Bài viết này chia sẻ lộ trình nâng cấp thiết bị và phần mềm để chuyển đổi sang EtherNet/IP (CIP) mà không làm gián đoạn dây chuyền...",
-            link: "https://www.linkedin.com/in/ngo-van-cuong-3a8275b7" 
+            link: "https://www.linkedin.com/in/ngo-van-cuong-3a8275b7"
         },
         {
             date: "Tháng 2, 2026",
             title: "Kinh nghiệm thực tiễn: Lỗi chết máy khi tải file .ACD vào ControlLogix",
             summary: "AOI (Add-On Instructions) rất uy lực, nhưng nếu quản lý các Data Type (UDT) không chuẩn khi Online Edit, bạn sẽ đau đầu. Đọc thêm về cách tôi quy chuẩn hóa code...",
-            link: "https://www.rockwellautomation.com/en-us/company/news/blogs.html" 
+            link: "https://www.rockwellautomation.com/en-us/company/news/blogs.html"
         }
     ],
 
@@ -106,6 +106,13 @@ const portfolioData = {
         { src: "assets/ab-controllogix.png", alt: "Tủ điện ControlLogix 1756 lắp ráp hoàn thiện tại xưởng" },
         { src: "assets/ab-panelview.png", alt: "Giao diện SCADA trên màn PanelView Plus 7" },
         { src: "assets/project-migration.png", alt: "Nâng cấp hệ thống SLC-500 cũ" },
-        { src: "assets/project-scada.png", alt: "Phòng điều khiển trung tâm nhà máy" }
+        { src: "assets/project-scada.png", alt: "Phòng điều khiển trung tâm nhà máy" },
+        { src: "assets/PLC5.png", alt: "Dòng PLC5 đời củ" },
+        { src: "assets/SLC500.png", alt: "Dòng SLC500 đời củ" },
+        { src: "assets/Micro850PLC.png", alt: "Dòng PLC mini cho các small project" },
+        { src: "assets/ControllogixPLC.png", alt: "Dòng PLC cho các dự án lớn" },
+        { src: "assets/CompaclogixPLC.png", alt: "Dòng PLC cho các dự án vừa và nhỏ" },
+        { src: "assets/Compact5000plc.png", alt: "Dòng PLC cho các dự án lớn" }
+
     ]
 };
