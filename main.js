@@ -178,7 +178,37 @@ document.addEventListener('DOMContentLoaded', () => {
                 </div>`;
             }).join('');
         }
+
+        // Render Gallery
+        const galleryContainer = document.getElementById('gallery-container');
+        if(galleryContainer && portfolioData.gallery) {
+            let gDelay = 0;
+            galleryContainer.innerHTML = portfolioData.gallery.map((g, index) => {
+                let delayStr = gDelay > 0 ? `style="transition-delay: ${gDelay}ms;"` : '';
+                gDelay += 100;
+                return `
+                <div class="gallery-item fade-in" ${delayStr} onclick="window.openLightbox(${index})">
+                    <img src="${g.src}" alt="${g.alt}">
+                </div>`;
+            }).join('');
+        }
     }
+
+    // Lightbox Logic
+    window.openLightbox = function(index) {
+        if(portfolioData && portfolioData.gallery) {
+            const lb = document.getElementById('lightbox');
+            const lbImg = document.getElementById('lightbox-img');
+            const lbCap = document.getElementById('lightbox-caption');
+            lb.classList.add('show');
+            lbImg.src = portfolioData.gallery[index].src;
+            lbCap.innerText = portfolioData.gallery[index].alt;
+        }
+    };
+
+    window.closeLightbox = function() {
+        document.getElementById('lightbox').classList.remove('show');
+    };
 
     // Window global function for expanding News
     window.toggleNews = function(index) {

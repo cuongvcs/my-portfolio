@@ -23,16 +23,16 @@
                 <!-- CÁCH THÊM LOGO: 
                      1. Copy ảnh logo của bạn vào thư mục assets, đổi tên thành logo.png.
                      2. XÓA dòng chữ VCS AUTOMATION bên dưới đi.
-                     3. XÓA các dấu mũi tên <!-- và -- ở thẻ <img> bên dưới để kích hoạt nó lên.
-                -->
-                 <img src="assets/logo.png" alt="VCS Logo" class="nav-brand-logo">
-                <!--<span class="logo-icon">⚡</span> VCS <span class="highlight">AUTOMATION</span> -->
+                     3. XÓA các dấu mũi tên < và ở thẻ <img> bên dưới để kích hoạt nó lên.-->
+                <img src="assets/logo.png" alt="VCS Logo" class="nav-brand-logo">
+                <!-- <span class="logo-icon">⚡</span> VCS <span class="highlight">AUTOMATION</span> -->
             </a>
             <ul class="nav-links">
                 <li><a href="#home">Home</a></li>
                 <li><a href="#about">About</a></li>
                 <li><a href="#skills">Skills</a></li>
                 <li><a href="#portfolio">Projects</a></li>
+                <li><a href="#gallery">Gallery</a></li>
                 <li><a href="#news">News</a></li>
                 <li><a href="#contact" class="btn-primary-sm">Contact Me</a></li>
             </ul>
@@ -140,6 +140,17 @@
         </div>
     </section>
 
+    <!-- Gallery Section -->
+    <section id="gallery" class="section">
+        <div class="container">
+            <h2 class="section-title text-center">Project <span class="highlight">Gallery</span></h2>
+            <p class="section-subtitle text-center">Hình ảnh thực tế tủ điện, công trường và máy móc.</p>
+            <div class="gallery-grid" id="gallery-container">
+                <!-- Gallery will be rendered here by main.js -->
+            </div>
+        </div>
+    </section>
+
     <!-- News Section -->
     <section id="news" class="section section-dark"
         style="background-color: var(--bg-dark); border-top: 1px solid var(--border);">
@@ -207,6 +218,13 @@
             <footer class="footer">
                 <p>© 2026 System Integrator Portfolio. Crafted with Precision & Ladder Logic.</p>
             </footer>
+
+            <!-- Lightbox Modal -->
+            <div id="lightbox" class="lightbox">
+                <span class="lightbox-close" onclick="window.closeLightbox()">&times;</span>
+                <img class="lightbox-content" id="lightbox-img">
+                <div id="lightbox-caption"></div>
+            </div>
 
             <!-- Scripts -->
             <script src="data.js"></script>

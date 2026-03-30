@@ -98,5 +98,14 @@ const portfolioData = {
             summary: "AOI (Add-On Instructions) rất uy lực, nhưng nếu quản lý các Data Type (UDT) không chuẩn khi Online Edit, bạn sẽ đau đầu. Đọc thêm về cách tôi quy chuẩn hóa code...",
             link: "https://www.rockwellautomation.com/en-us/company/news/blogs.html" 
         }
+    ],
+
+    // 4. THƯ VIỆN HÌNH ẢNH (GALLERY)
+    // CÁCH DÙNG: Copy ảnh của bạn vào thư mục assets. Thêm 1 block mới bên dưới và đổi tên file ảnh.
+    gallery: [
+        { src: "assets/ab-controllogix.png", alt: "Tủ điện ControlLogix 1756 lắp ráp hoàn thiện tại xưởng" },
+        { src: "assets/ab-panelview.png", alt: "Giao diện SCADA trên màn PanelView Plus 7" },
+        { src: "assets/project-migration.png", alt: "Nâng cấp hệ thống SLC-500 cũ" },
+        { src: "assets/project-scada.png", alt: "Phòng điều khiển trung tâm nhà máy" }
     ]
 };
